@@ -37,7 +37,6 @@ let listener = function (event){
 
   // 全ての文章が表示されたら、画面をタップしても何も起こらないようにする
     if (usedSentences.length > sentences.length) {
-      document.getElementById('output').innerHTML = '<button type=\"button\" onclick=\"window.location.reload();\">最初から</button>';
       document.removeEventListener('click', listener,false);
     }
 }
