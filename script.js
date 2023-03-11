@@ -36,7 +36,7 @@ let listener = function (event){
   usedSentences.push(sentence);
 
   // 全ての文章が表示されたら、画面をタップしても何も起こらないようにする
-    if (usedSentences.length > sentences.length) {
+    if (usedSentences.length === sentences.length) {
       document.removeEventListener('click', listener,false);
     }
 }
