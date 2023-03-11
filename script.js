@@ -41,8 +41,5 @@ let listener = function (event){
       document.removeEventListener('click', listener,false);
     }
 }
-window.onload = funtion(){
-  window.scrollTo(0,0);
-}
 // 画面がタップされたときの処理
 document.addEventListener('click', listener,false);
