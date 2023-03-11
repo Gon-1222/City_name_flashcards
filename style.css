@@ -10,12 +10,12 @@ h1 {
 }
 
 #output {
+  box-sizing: border-box;
   margin: 0;
   padding: 20px;
-  font-size: calc(1.2rem + 1vw); /* 画面サイズに応じてフォントサイズを自動調整 */
+  height: calc(100vh - 80px - 2rem);
+  font-size: calc(1.2rem + 1vw);
   border: 1px solid #ccc;
-  border-radius: 5px;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
