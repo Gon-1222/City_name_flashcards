@@ -20,8 +20,7 @@ const sentences = [
 
 let usedSentences = [];
 
-// 画面がタップされたときの処理
-document.addEventListener('click', () => {
+let listener = function (event){
   // ランダムな文章を選択する
   let sentence = sentences[Math.floor(Math.random() * sentences.length)];
 
@@ -35,9 +34,12 @@ document.addEventListener('click', () => {
 
   // 選択された文章をusedSentencesに追加する
   usedSentences.push(sentence);
+
   // 全ての文章が表示されたら、画面をタップしても何も起こらないようにする
     if (usedSentences.length === sentences.length) {
-      document.removeEventListener('click', () => {});
+	
+      document.removeEventListener('click', listener,false);
     }
-
-});
+}
+// 画面がタップされたときの処理
+document.addEventListener('click', listener,false);
